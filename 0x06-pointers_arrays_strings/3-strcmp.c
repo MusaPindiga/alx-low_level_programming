@@ -6,32 +6,18 @@
  * @s1: first parameter string
  * @s2: second parameter string
  *
- * Return: 0 if the strings are the same, -15 if the second
- * is > the first, otherwise 15.
+ * Return: negative difference of the first mismatched character, if s1 > s2
+ *	   0, if s1 == s2
+ *	   positive difference of the first mismatched character, if s1 < s2.
  */
 int _strcmp(char *s1, char *s2)
 {
-	int s1_len =  0, s2_len = 0, value = 0, index = 0, index2 = 0;
+	int index;
 
-	while (s1[index++])
-		s1_len++;
+	for (index = 0; s1[index] != '\0' || s2[index] != '\0'; index++)
 
-	while (s2[index2++])
-		s2_len++;
-
-	for (index = 0; s1[index] != '\0' && s2[index] != '\0'; index++)
-	{
 		if (s1[index] != s2[index])
+			return (s1[index] - s2[index]);
 
-			if (s2_len > s1_len)
-				value = -15;
-
-			else
-				value = 15;
-
-		else
-			value = 0;
-	}
-
-	return (value);
+	return (s1[index] - s2[index]);
 }
