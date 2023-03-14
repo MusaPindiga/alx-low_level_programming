@@ -22,8 +22,6 @@ char *create_array(unsigned int size, char c)
 		arr[index] = c;
 		index++;
 	}
-	if (!arr)
-		return (NULL);
-	else
-		return (arr);
+
+	return (arr);
 }
