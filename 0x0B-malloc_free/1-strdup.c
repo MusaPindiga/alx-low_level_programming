@@ -29,5 +29,7 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		string[i] = str[i];
 
+	string[i] = '\0';
+
 	return (string);
 }
