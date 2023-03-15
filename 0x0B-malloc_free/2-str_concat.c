@@ -8,7 +8,7 @@
  * @s2: The second string characters
  *
  * Return: return NULL on failure, otherwise pointer to the
- * 	newly allocated string.
+ *	newly allocated string.
  */
 
 char *str_concat(char *s1, char *s2)
@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	int index, len = 0, concat_len = 0;
 	char *concat;
 
-	if (s1 || s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		concat = "";
 
 	for (index = 0; s1[index] || s2[index]; index++)
