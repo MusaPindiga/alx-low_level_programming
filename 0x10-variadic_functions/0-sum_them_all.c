@@ -9,21 +9,18 @@
  *
  * Return: 0 if n == 0, otherwise sum of the arguments
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int i, sum = 0;
-	va_list num;
+	va_list nums;
+	unsigned int index, sum = 0;
 
-	if (n == 0)
-		return (0);
+	va_start(nums, n);
 
-	va_start(num, n);
-	
-	for (i = 0; i < n; i++)
-		sum =+ va_arg(num, int);
+	for (index = 0; index < n; index++)
+		sum += va_arg(nums, int);
 
-	va_end(num);
+	va_end(nums);
 
 	return (sum);
 }
+
