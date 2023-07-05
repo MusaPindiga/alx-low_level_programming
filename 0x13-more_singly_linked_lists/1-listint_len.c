@@ -1,9 +1,9 @@
 #include "lists.h"
-#include <stdlib.h>
+
 /**
  * listint_len - finds the number of elements of a list
  *
- * @h: The listint_t list
+ * @h: pointer to the head of listint_t list
  *
  * Return: number of the list in listint_t
  *
