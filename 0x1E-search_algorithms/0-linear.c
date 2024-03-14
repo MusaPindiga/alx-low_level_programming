@@ -2,11 +2,11 @@
 
 /**
  * linear_search - finds a given element in a array
- * 
+ *
  * @array: array to be searched in
  * @size: length of the given array
  * @value: an item to be searched for
- * 
+ *
  * Return - -1 if the element is not found or array is NULL,
  * 	otherwise the first index where the value is located
  */
